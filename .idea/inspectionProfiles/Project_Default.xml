@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="126">
+          <list size="127">
             <item index="0" class="java.lang.String" itemvalue="matplotlib" />
             <item index="1" class="java.lang.String" itemvalue="bs4" />
             <item index="2" class="java.lang.String" itemvalue="opencv-python" />
@@ -131,6 +131,7 @@
             <item index="123" class="java.lang.String" itemvalue="lightgbm" />
             <item index="124" class="java.lang.String" itemvalue="flask" />
             <item index="125" class="java.lang.String" itemvalue="Werkzeug" />
+            <item index="126" class="java.lang.String" itemvalue="evidently" />
           </list>
         </value>
       </option>
