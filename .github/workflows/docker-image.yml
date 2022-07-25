@@ -1,0 +1,32 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKERHUB_USER -p $DOCKER_PASSWORD
+    - name: Build the docker image 
+      run: docker build . --file Dockerfile --tag housing/node-test:$(date +%s)
+   
+    - name: Docker Push
+      run: docker push ${{secrets.DOCKERUSER}}/YOUR_DOCKER_HUB_REPO_NAME
+        
+        
+        
+        
+        
