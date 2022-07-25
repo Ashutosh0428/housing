@@ -24,7 +24,7 @@ jobs:
       run: docker build . --file Dockerfile --tag ashu1407/node-test:$(date +%s)
    
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/node-test:tagname
+      run: docker push ${{secrets.DOCKER_USER}}/node-test:0.1.46
         
         # sona
         
